@@ -1,7 +1,7 @@
 document.getElementById("id_business_version").innerHTML = "Business version = 2017.11.27.3";
 //window.addEventListener("deviceorientation",on_device_orientation);
 window.addEventListener("devicemotion",on_device_motion);
-//-----------------------------------------------------------------------------------------------------------------------
+//---------------------------------------
 function deseneaza_cerc (unghi1, unghi2)
 {
 	var canvas = document.getElementById("id_canvas");
@@ -19,17 +19,17 @@ function deseneaza_cerc (unghi1, unghi2)
 	ctx.lineWidth = 5;					//Numarul "5" reprezinta grosimea contului
 	ctx.stroke();
 }
-//-----------------------------------------------------------------------------------------------------------------------
+//---------------------------------------
 function on_device_motion(e)
 {
 	var beta = Math.atan(e.accelerationIncludingGravity.x / e.accelerationIncludingGravity.z) * 180 / Math.PI;
 	var gamma = - Math.atan(e.accelerationIncludingGravity.y / e.accelerationIncludingGravity.z) * 180 / Math.PI;
 	
-	deseneaza_cerc(e.gamma,e.beta);
+	deseneaza_cerc(gamma,beta);
 }
-//-----------------------------------------------------------------------------------------------------------------------
+//---------------------------------------
 function on_device_orientation(e)
 {
-	deseneaza_cerc(gamma, beta);
+	deseneaza_cerc(e.gamma, e.beta);
 }
 //----------------------------------------------------------------------------------------------------------------------
