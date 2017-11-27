@@ -4,8 +4,6 @@ var canvas = document.getElementById("id_canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
-ctx.moveTo(0, 0);
-ctx.lineTo(100, 100);
-ctx.lineTo(120,50);
-ctx.closePath();
+ctx.arc(100,100,20,0,Math.PI/2,true);
+//"TRUE" se refera la sensul acelor de ceas sau sensul contrar acelor de ceas
 ctx.stroke();
