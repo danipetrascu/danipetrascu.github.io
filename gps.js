@@ -1,6 +1,6 @@
 document.getElementById("id_business_version").innerHTML = "Business version = 2017.12.14.0";
 
-navigator.geolocation.getCurrentPosition();
+navigator.geolocation.getCurrentPosition(on_position_success, on_position_failure);
 //-------------------------------------------
 function on_position_success(e)
 {
