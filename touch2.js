@@ -20,3 +20,16 @@ for(var i=0; i<touches.length; i++)
 	
 }
 //---------------------------------------
+
+function on_move_touch(e)
+{
+	var touches=e.touches;
+	for (var i=0; i<touches.lenght;i++)
+	{
+	context.beginPath();
+	context.arc(touches.item(i).pageX,touches.item(i).pageY,20,0,2*Math.PI);
+	context.strokeStyle=lista_culori[i];
+	context.lineWidth=5;
+	context.stroke();
+	}
+}
