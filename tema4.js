@@ -24,6 +24,4 @@ function on_device_motion(e)
 	document.getElementById("id_rot_x").innerHTML="beta=" + Math.round(beta * 100)/100;
 	document.getElementById("id_rot_y").innerHTML="gamma=" + Math.round(gamma * 100)/100;
 	
-	
-	
 }
